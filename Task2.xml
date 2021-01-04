@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students_info SYSTEM "Task2.dtd">
+<students_info>
+	<student>
+		<id> 001 </id>
+		<regno> 170024 </regno>
+		<name> ABC </name>
+		<avg> 92 </avg>
+		<dob> 15-08-1992 </dob>
+		<time> 9:15 </time>
+		<mobileno> 9849984900 </mobileno>
+		<distinction> YES </distinction>
+	</student>
+	<student>
+		<id> 002 </id>
+		<regno> 180026 </regno>
+		<name> DEF </name>
+		<avg> 90 </avg>
+		<dob> 21-11-1993 </dob>
+		<time> 9:30 </time>
+		<mobileno> 7623564400 </mobileno>
+		<distinction> YES </distinction>
+	</student>
+	<student>
+		<id> 003 </id>
+		<regno> 170028 </regno>
+		<name> ALK </name>
+		<avg> 95 </avg>
+		<dob> 05-01-1992 </dob>
+		<time> 10:03 </time>
+		<mobileno> 9848296366 </mobileno>
+		<distinction> YES </distinction>
+	</student>
+	<student>
+		<id> 004 </id>
+		<regno> 190025 </regno>
+		<name> KLM </name>
+		<avg> 98 </avg>
+		<dob> 15-07-1994 </dob>
+		<time> 9:15 </time>
+		<mobileno> 9646203121 </mobileno>
+		<distinction> YES </distinction>
+	</student>
+	<student>
+		<id> 005 </id>
+		<regno> 180033 </regno>
+		<name> XYZ </name>
+		<avg> 88 </avg>
+		<dob> 26-03-1993 </dob>
+		<time> 12:50 </time>
+		<mobileno> 9643221133 </mobileno>
+		<distinction> YES </distinction>
+	</student>
+</students_info>
