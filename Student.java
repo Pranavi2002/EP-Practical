@@ -34,10 +34,21 @@ public class Student {
 			else {
 				System.out.println("Deletion Failed");
 		}
-		case 3 : 
+// 			case 3 :
+// 			int reg1 = sc.nextInt();	
+// 			StudentInsertion su = new StudentInsertion();
+// 			int k = su.StudentUpdate(reg1);
+// 			if(k>0) {
+// 				System.out.println("Updation Successful");
+// 			}
+// 			else {
+// 				System.out.println("Updation Failed");
+// 			}
+			case 3 :
+			String name = sc.next();
 			int reg1 = sc.nextInt();	
 			StudentInsertion su = new StudentInsertion();
-			int k = su.StudentUpdate(reg1);
+			int k = su.StudentUpdate(name,reg1);
 			if(k>0) {
 				System.out.println("Updation Successful");
 			}
