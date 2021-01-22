@@ -32,15 +32,24 @@ public class StudentInsertion {
 // 		int k = stmt3.executeUpdate(); 
 // 		return k;
 // 	}
-	public int StudentUpdate(String name,int reg1) throws ClassNotFoundException, SQLException {
-		Connection con = DBUtil.DBConnection();
-		// PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name='Sai Pranavi'  where regno=?");
-		PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name=?  where regno=?");
-		stmt3.setString(1,name);
-		stmt3.setInt(2,reg1);
-		int k = stmt3.executeUpdate(); 
-		return k;
-	}
+// 	public int StudentUpdate(String name,int reg1) throws ClassNotFoundException, SQLException {
+// 		Connection con = DBUtil.DBConnection();
+// 		// PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name='Sai Pranavi'  where regno=?");
+// 		PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name=?  where regno=?");
+// 		stmt3.setString(1,name);
+// 		stmt3.setInt(2,reg1);
+// 		int k = stmt3.executeUpdate(); 
+// 		return k;
+// 	}
+	public int StudentUpdate(int reg1, String name, String email) throws SQLException, ClassNotFoundException {
+	    Connection con = DBUtil.DBConnection();
+	    PreparedStatement statement = con.prepareStatement("update StudentDetails set name = ?, email= ? where regno = ?");
+	    statement.setString(1, name);
+	    statement.setString(2, email);
+	    statement.setInt(3, reg1);
+	    int i = statement.executeUpdate();
+	    return i;
+	  }
 	public void StudentDisplay() throws ClassNotFoundException, SQLException {
 		Connection con = DBUtil.DBConnection();
 //		PreparedStatement stmt4=con.prepareStatement("select * from StudentDetails");
