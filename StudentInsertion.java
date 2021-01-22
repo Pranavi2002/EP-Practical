@@ -25,10 +25,19 @@ public class StudentInsertion {
 		int j = stmt2.executeUpdate(); 
 		return j;
 	}
-	public int StudentUpdate(int reg1) throws ClassNotFoundException, SQLException {
+// 	public int StudentUpdate(int reg1) throws ClassNotFoundException, SQLException {
+// 		Connection con = DBUtil.DBConnection();
+// 	        PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name='Sai Pranavi'  where regno=?");
+// 		stmt3.setInt(1,reg1);
+// 		int k = stmt3.executeUpdate(); 
+// 		return k;
+// 	}
+	public int StudentUpdate(String name,int reg1) throws ClassNotFoundException, SQLException {
 		Connection con = DBUtil.DBConnection();
-		PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name='Sai Pranavi'  where regno=?");
-		stmt3.setInt(1,reg1);
+		// PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name='Sai Pranavi'  where regno=?");
+		PreparedStatement stmt3=con.prepareStatement("update StudentDetails set name=?  where regno=?");
+		stmt3.setString(1,name);
+		stmt3.setInt(2,reg1);
 		int k = stmt3.executeUpdate(); 
 		return k;
 	}
