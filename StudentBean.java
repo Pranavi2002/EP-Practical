@@ -6,7 +6,7 @@ public class StudentBean {
 	public void setRegno(int regno) {
 		this.regno = regno;
 	}
-	public int getRegno() {
+	public  int getRegno() {
 		return regno;
 	}
 	public void setName(String name) {
