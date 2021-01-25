@@ -1,0 +1,26 @@
+package com.kl.Bean;
+
+public class Bean {
+private int itemid;
+private String itemname;
+private int costofitem;
+public int getItemid() {
+	return itemid;
+}
+public void setItemid(int itemid) {
+	this.itemid = itemid;
+}
+public String getItemname() {
+	return itemname;
+}
+public void setItemname(String itemname) {
+	this.itemname = itemname;
+}
+public int getCostofitem() {
+	return costofitem;
+}
+public void setCostofitem(int costofitem) {
+	this.costofitem = costofitem;
+}
+
+}
