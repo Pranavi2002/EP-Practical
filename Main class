@@ -14,8 +14,12 @@ public class Mainclass {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Scanner sc = new Scanner(System.in);
-		 int ch;
-		 ch = sc.nextInt();
+		System.out.println("The operations to be performed are:");
+		System.out.println("1.Insert the attributes");
+		System.out.println("2.Display the cost of all the items");
+		System.out.println("3.Display all the items");
+		System.out.println("Enter your choice");
+		 int ch = sc.nextInt();
 		 Bean sb = new Bean();
 		switch(ch) {
 		case 1 : 
