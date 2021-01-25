@@ -1,0 +1,38 @@
+package com.kl.InsertDisplay;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.kl.DB.DBUtil;
+import com.kl.Bean.Bean;
+
+public class InsertDisplay {
+	public int StudentInsert(Bean bean) throws ClassNotFoundException, SQLException {
+		Connection con = DBUtil.DBConnection();
+		PreparedStatement stmt1=con.prepareStatement("insert into sales values(?,?,?)");
+		stmt1.setInt(1,bean.getItemid());
+		stmt1.setString(2,bean.getItemname());
+		stmt1.setInt(3,bean.getCostofitem());
+		int i = stmt1.executeUpdate(); 
+		return i;
+	}
+	public void StudentDisplay() throws ClassNotFoundException, SQLException {
+		Connection con = DBUtil.DBConnection();
+		PreparedStatement stmt2=con.prepareStatement("select sum(cost) from sales"); 
+		ResultSet rs=stmt2.executeQuery();  
+		while(rs.next()){  
+			System.out.println(rs.getInt(1));
+	}
+}
+		public void ItemsDisplay() throws ClassNotFoundException, SQLException {
+			Connection con = DBUtil.DBConnection();
+			PreparedStatement stmt3=con.prepareStatement("select * from sales"); 
+			ResultSet rs1=stmt3.executeQuery();  
+			while(rs1.next()){  
+				System.out.println(rs1.getInt(1)+" "+ rs1.getString(2)+" "+ rs1.getInt(3));
+		}
+}
+}
+
