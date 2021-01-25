@@ -1,0 +1,53 @@
+package com.kl.MainPackage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import com.kl.InsertDisplay.InsertDisplay;
+import com.kl.Bean.Bean;
+import com.kl.DB.DBUtil;
+
+public class Mainclass {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Scanner sc = new Scanner(System.in);
+		 int ch;
+		 ch = sc.nextInt();
+		 Bean sb = new Bean();
+		switch(ch) {
+		case 1 : 
+			System.out.println("Enter the Item id : ");
+			sb.setItemid(sc.nextInt());
+			System.out.println("Enter the Item name : ");
+			sb.setItemname(sc.next());
+			System.out.println("Enter the Cost of the item : ");
+			sb.setCostofitem(sc.nextInt());	
+		InsertDisplay si = new InsertDisplay();
+		int i = si.StudentInsert(sb);
+		if(i>0) {
+			System.out.println("Insertion Successful");
+		}
+		else {
+			System.out.println("Insertion Failed");
+		}
+		break;
+		case 2 : 
+			InsertDisplay sdis = new InsertDisplay();
+			System.out.println("The total cost of items is: ");
+			sdis.StudentDisplay();
+			break;
+		case 3: 
+			InsertDisplay sdis1 = new InsertDisplay();
+			System.out.println("The total items bought by customer are: ");
+			sdis1.ItemsDisplay();
+			break;
+		case 4 :
+			System.exit(0);
+		default : 
+			System.out.println("Enter a valid no : ");
+	}
+	}
+}
