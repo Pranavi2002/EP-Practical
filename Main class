@@ -41,7 +41,7 @@ public class Mainclass {
 			break;
 		case 3: 
 			InsertDisplay sdis1 = new InsertDisplay();
-			System.out.println("The total items bought by customer are: ");
+			System.out.println("The items bought by customer are: ");
 			sdis1.ItemsDisplay();
 			break;
 		case 4 :
