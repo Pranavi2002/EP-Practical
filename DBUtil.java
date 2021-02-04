@@ -1,5 +1,3 @@
-package com.klu.DB;
-import java.lang.ClassNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -13,5 +11,5 @@ public class DBUtil {
 		Class.forName(forNameURL);
 		Connection con = DriverManager.getConnection(dBURL,username,password);
 		return con;
-	}
+}
 }
