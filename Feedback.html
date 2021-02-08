@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Feedback Page</title>
+</head>
+<body>
+<h1 style="text-align:center;"> Feedback form </h1>
+<form action="Feedback" method="post">
+<table align="center" class="bordered">
+<tr><td><h2>1. Student Email :</h2></td>
+			<td>
+				<input type = "email" name = "email" placeholder = "Enter your Username" required>
+			</td>
+			</tr>
+<tr>
+                <td><h2>2. How are your Classes going?</h2></td>
+               <td><select name="listQ1" class="dropdown" required>
+						<option>Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+	</tr>
+            <tr>
+                <td><h2>3. Was faculty good at explaining things ?</h2></td>
+                <td><select name="listQ2" class="dropdown" required>
+                        <option>Select</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Bad">Bad</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><h2>4. Was faculty effective in leading the Class ?</h2></td>
+                <td><select name="listQ3" class="dropdown" required>
+                        <option>Select</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Bad">Bad</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><h2>5. Stimulated Interest in the class by faculty ?</h2></td>
+                <td><select name="listQ4" class="dropdown" required>
+                        <option>Select</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Bad">Bad</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><h2>6. Are the syllabus completed by faculty in time ?</h2></td>
+                <td><select name="listQ5" class="dropdown" required>
+                        <option>Select</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Bad">Bad</option>
+                </select></td>
+            </tr>
+<tr><td><h2>7. Remarks:</h2></td>
+<td><textarea name="remark" placeholder="Enter your remarks, if any" ></textarea><br></td></tr>
+</table><br>
+<center><input type="submit" value="Submit Feedback"></center>
+</form>
+</body>
+</html>
